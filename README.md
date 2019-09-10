@@ -1,5 +1,5 @@
 # gnubee-omv4-packages
-OMV4 (arrakis) for GnuBee
+OMV4 (4.1.24-1 arrakis) for GnuBee
 
 Those are the packages I built, take them with caution. They work on my GnuBee, that's the only thing I can confirm!
 
