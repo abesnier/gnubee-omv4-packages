@@ -1,0 +1,38 @@
+Install Debian Jessie
+	remove all disks
+	install disk in first slot (shall be seen as /dev/sda)
+	download https://github.com/gnubee-git/gnubee-git.github.io/raw/master/debian/librecmc-ramips-mt7621-gb-pc1-squashfs-sysupgrade_2017-11-28.bin
+	flash firmware
+	reboot
+	ssh to the GnuBee
+	fdisk to create partitions
+		in my case sda1 4GB swap, sda2, remaining size ext4		
+	download debian-jessie-install https://raw.githubusercontent.com/gnubee-git/GnuBee_Docs/master/GB-PCx/scripts/jessie_3.10.14/debian-jessie-install
+	or https://raw.githubusercontent.com/abesnier/gnubee-omv4-packages/master/debian-jessie-install-ssd
+	run script, install on /dev/sda2
+	reboot
+	
+	ready to upgrade kernel
+	Flashing from usb does not work for me. 
+	install mtd-utils
+	apt install mtd-utils
+	download image gnubee-5.2.8-gbpc1.bin or gnubee-5.2.8-gbpc2.bin, depending on your GB
+	flash rom with : 
+		flashcp -v gnubee-5.1-rc3-gbpc2.bin /dev/mtd3
+	reboot
+	
+	ready to upgrade to Buster
+	edit /etc/apt/sources.list, replace content with:
+		deb http://httpredir.debian.org/debian buster main
+		deb http://httpredir.debian.org/debian buster-updates main
+		deb http://security.debian.org/debian-security buster/updates main
+		
+	run the following:
+	apt update
+	apt full-upgrade
+	apt autoremove
+	reboot
+	You should be running Debian Buster on a 5.2.8 Kernel.
+	Confirm with uname -r for kernel and cat /etc/issue for Debian
+		
+	Install other packages as required (mdadm, vsftp)
