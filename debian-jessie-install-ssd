@@ -11,7 +11,7 @@ failed(){
 debian_install(){
   mkdir -p /tmp/newroot
   mount -t ext4 ${1} /tmp/newroot
-  debootstrap --arch=mipsel --include=openssh-server,ntpdate,cron,locales,udev,ca-certificates,apt-transport-https,vlan,vsftpd,mtd-utils,samba,samba-client,sudo jessie /tmp/newroot http://archive.debian.org/debian/ || failed debootstrap
+  debootstrap --arch=mipsel --include=openssh-server,ntpdate,cron,locales,udev,ca-certificates,apt-transport-https,vlan,vsftpd,mtd-utils,sudo jessie /tmp/newroot http://archive.debian.org/debian/ || failed debootstrap
 }
 
 debian_fix(){
