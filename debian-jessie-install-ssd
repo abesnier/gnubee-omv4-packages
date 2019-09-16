@@ -60,7 +60,7 @@ format_partition(){
       echo "Formatting ${1}, please wait..."
 	  if  [[ $yn == "Y" || $yn == "y" ]] 
 	  then 
-		echo y | mkfs.ext4 -O ^has_journal -m 2 ${1}
+	    echo y | mkfs.ext4 -O ^has_journal -m 2 ${1}
 	  else 
 	    echo y | mkfs.ext4 -m 2 ${1}
 	  fi
