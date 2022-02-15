@@ -16,7 +16,7 @@ Install Debian Jessie
 	Flashing from usb does not work for me. 
 	install mtd-utils (already included in debian-jessie-install-ssd)
 	apt install mtd-utils
-	download image gnubee-5.2.8-gbpc1.bin or gnubee-5.2.8-gbpc2.bin, depending on your GB
+	download image gnubee-5.2.8-gbpc1.bin or gnubee-5.2.8-gbpc2.bin, depending on your GB (or latest from https://neil.brown.name/gnubee/)
 	flash rom with : 
 		flashcp -v gnubee-5.1-rc3-gbpc2.bin /dev/mtd3
 	reboot
