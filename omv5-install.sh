@@ -2,6 +2,7 @@
 # Just make sure you don't already have a /git directory, as it will be purged...
 # download this, and either sudo bash ./omv5-install.sh or chmod +x omv5-install.sh && sudo ./omv5-install.sh
 # No guarantee what so ever, but it repeatedly produced a working machine for me during testing.
+# It goes without saying that none of this is covered by OMV Team, and no help would be given on their forum about this setup!
 # https://groups.google.com/g/gnubee
 # Github: https://github.com/abesnier/ 
 
