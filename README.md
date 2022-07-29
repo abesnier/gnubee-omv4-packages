@@ -1,4 +1,10 @@
 # gnubee-omv4-packages
+
+added the salt minion and salt common 3003 if somebody needs to install OMV5.
+And a script to install OMV5 automatically.
+
+
+Used to be:
 OMV4 (4.1.34-1 arrakis) for GnuBee
 
 Those are the packages I built, take them with caution. They work on my GnuBee, that's the only thing I can confirm!
