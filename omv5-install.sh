@@ -37,8 +37,8 @@ make clean binary
 mkdir /var/local/deb-repo 
 cp `find /git -name '*.deb'` /var/local/deb-repo 
 cd /var/local/deb-repo 
-wget --no-check-certificate https://besnier.ga/salt-common_3003+ds-1_all.deb 
-wget --no-check-certificate https://besnier.ga/salt-minion_3003+ds-1_all.deb 
+wget --no-check-certificate https://raw.githubusercontent.com/abesnier/gnubee-omv4-packages/master/salt-minion_3003%2Bds-1_all.deb 
+wget --no-check-certificate https://raw.githubusercontent.com/abesnier/gnubee-omv4-packages/master/salt-common_3003%2Bds-1_all.deb 
 bash -c 'dpkg-scanpackages . | gzip > Packages.gz' 
 echo "deb [trusted=yes] file:/var/local/deb-repo/ ./" | sudo tee /etc/apt/sources.list.d/localrepo.list 
 echo "deb http://deb.debian.org/debian buster-backports main" | sudo tee /etc/apt/sources.list.d/backports.list 
