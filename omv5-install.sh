@@ -38,7 +38,7 @@ debuild -b -uc -us
 # cd ../openmediavault/debian
 # sed -i 's/salt-minion (>= 3003),//g' control
 # build omv
-cd ../.. 
+cd ..
 make clean binary 
 # make a local directory for a local repository
 mkdir /var/local/deb-repo 
