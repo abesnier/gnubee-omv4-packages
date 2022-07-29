@@ -1,3 +1,10 @@
+# Quick and dirty install script for OMV5 on the GnuBee (or any Debian buster distro as a matter of fact).
+# Just make sure you don't already have a /git directory, as it will be purged...
+# download this, and either sudo bash ./omv5-install.sh or chmod +x omv5-install.sh && sudo ./omv5-install.sh
+# No guarantee what so ever, but it repeatedly produced a working machine for me during testing.
+# https://groups.google.com/g/gnubee
+# Github: https://github.com/abesnier/ 
+
 #!/bin/bash -x
 
 rm  /etc/apt/sources.list.d/*.list
